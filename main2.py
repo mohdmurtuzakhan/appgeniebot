@@ -12,12 +12,8 @@ win.geometry("700x350")
 
 # Define a function to show the popup message
 def show_msg():
-    # messagebox.showinfo("Message","Hey There! I hope you are doing well.")
-    #Find your key and resource region under the 'Keys and Endpoint' tab in your Speech resource in Azure Portal
-	#Remember to delete the brackets <> when pasting your key and region!
-    print("Speak into your microphone.")
     Label(win, text= "Please speak now.", font= ('Aerial 15 bold italic')).pack(pady= 5)
-
+    print("Speak into your microphone.")
     speech_config = speechsdk.SpeechConfig(subscription="3db91ff466f145f7af6493edd6abf2a1", region="centralindia")
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
     result = speech_recognizer.recognize_once_async().get()
