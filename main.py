@@ -5,9 +5,12 @@ from tkinter import messagebox
 
 def main():
     r = tk.Tk()
+    r.geometry('300x200')
     r.title('AppGenie Bot')
     button = tk.Button(r, text='Speak', width=25, command=recognize_from_mic())
-    button.pack()
+    button.pack(ipadx=5,
+    ipady=5,
+    expand=True)
     r.mainloop()
 
 def recognize_from_mic():
