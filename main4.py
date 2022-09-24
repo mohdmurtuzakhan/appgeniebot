@@ -40,7 +40,7 @@ class MainView(tk.Frame):
         p2.place(in_=container, x=0, y=0, relwidth=1, relheight=1)
         p3.place(in_=container, x=0, y=0, relwidth=1, relheight=1)
 
-        b1 = tk.Button(buttonframe, text="Page 1", command=p1.show)
+        b1 = tk.Button(buttonframe, text="Dictate", command=p1.show)
         b2 = tk.Button(buttonframe, text="Page 2", command=p2.show)
         b3 = tk.Button(buttonframe, text="Page 3", command=p3.show)
 
@@ -54,5 +54,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     main = MainView(root)
     main.pack(side="top", fill="both", expand=True)
-    root.wm_geometry("400x400")
+    root.wm_geometry("700x350")
     root.mainloop()
