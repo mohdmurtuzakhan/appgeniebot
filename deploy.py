@@ -2,6 +2,7 @@
 from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
+import webbrowser
 
 # Create an instance of tkinter frame
 win= Tk()
@@ -14,7 +15,7 @@ def deploy():
    messagebox.showinfo("Project is deployed to GitHub repo.")
 
 def showResult():
-   messagebox.showinfo("Show result in browser.")
+  webbrowser.open("file:///home/vassar/Desktop/addition.html", new=2)
 
 # Add an optional Label widget
 Label(win, text= "Deplot it to Github!", font= ('Aerial 17 bold italic')).pack(pady= 30)
